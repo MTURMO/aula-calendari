@@ -1,0 +1,242 @@
+[
+ {
+  "jornada": 1,
+  "home": false,
+  "opponent": "Club Handbol Martorell",
+  "opponent_id": 201090,
+  "location": "I.E.M., Av. Germans Martí, 16, 08760 Martorell, Barcelona",
+  "default_date": "2026-09-26"
+ },
+ {
+  "jornada": 2,
+  "home": true,
+  "opponent": "MGC Mútua Handbol Ribes Atlètic",
+  "opponent_id": 215376,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2026-10-04"
+ },
+ {
+  "jornada": 3,
+  "home": false,
+  "opponent": "Club Handbol Esplugues",
+  "opponent_id": 225731,
+  "location": "CEM Les Moreres, Plaça Les Moreres, s/n, 08950 Esplugues de Llobregat, Barcelona",
+  "default_date": "2026-10-10"
+ },
+ {
+  "jornada": 4,
+  "home": true,
+  "opponent": "Club Handbol Vilanova i la Geltrú",
+  "opponent_id": 201805,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2026-10-18"
+ },
+ {
+  "jornada": 5,
+  "home": true,
+  "opponent": "Club Handbol Cambrils",
+  "opponent_id": 201396,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2026-10-25"
+ },
+ {
+  "jornada": 6,
+  "home": false,
+  "opponent": "LBDP Penya Blaugrana SES",
+  "opponent_id": 212719,
+  "location": "Pavelló Poliesportiu Municipal (Sant Esteve Sesrovires), Carrer Marta Mata, s/n, 08635 Sant Esteve Sesrovires, Barcelona",
+  "default_date": "2026-10-31"
+ },
+ {
+  "jornada": 7,
+  "home": true,
+  "opponent": "Club Handbol Sant Llorenç A",
+  "opponent_id": 201695,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2026-11-08"
+ },
+ {
+  "jornada": 8,
+  "home": false,
+  "opponent": "HC Andorra Serradells",
+  "opponent_id": 215529,
+  "location": "Centre Esportiu Serradells, Plaça Baró de Coubertin, Carretera de la Comella, AD500 Andorra la Vella, Andorra",
+  "default_date": "2026-11-14"
+ },
+ {
+  "jornada": 9,
+  "home": true,
+  "opponent": "CH. Sant Esteve Sesrovires-B",
+  "opponent_id": 219029,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2026-11-22"
+ },
+ {
+  "jornada": 10,
+  "home": false,
+  "opponent": "Club Handbol Sant Andreu B",
+  "opponent_id": 222445,
+  "location": "Poliesportiu Camp del Ferro, Plaça Albert Badia i Mur, 1, 08027 Barcelona",
+  "default_date": "2026-11-28"
+ },
+ {
+  "jornada": 11,
+  "home": true,
+  "opponent": "Montaggio",
+  "opponent_id": 207145,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2026-12-13"
+ },
+ {
+  "jornada": 12,
+  "home": false,
+  "opponent": "Handbol Berga",
+  "opponent_id": 201934,
+  "location": "Pavelló Zona Esportiva Antoni Sabata, Guillem de Berguedà, s/n (Zona Esportiva), 08600 Berga, Barcelona",
+  "default_date": "2026-12-19"
+ },
+ {
+  "jornada": 13,
+  "home": true,
+  "opponent": "Club Handbol Sant Andreu de la Barca",
+  "opponent_id": 220274,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-01-10"
+ },
+ {
+  "jornada": 14,
+  "home": false,
+  "opponent": "Handbol Cooperativa Sant Boi B",
+  "opponent_id": 201899,
+  "location": "CEM Pau Gasol, Carrer de Lluís Companys, 23, 08830 Sant Boi de Llobregat, Barcelona",
+  "default_date": "2027-01-16"
+ },
+ {
+  "jornada": 15,
+  "home": true,
+  "opponent": "Handbol Gavà (B)",
+  "opponent_id": 201374,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-01-24"
+ },
+ {
+  "jornada": 16,
+  "home": true,
+  "opponent": "Club Handbol Martorell",
+  "opponent_id": 201090,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-01-31"
+ },
+ {
+  "jornada": 17,
+  "home": false,
+  "opponent": "MGC Mútua Handbol Ribes Atlètic",
+  "opponent_id": 215376,
+  "location": "Pavelló Municipal de Ribes, Carrer Cristòfol Mestres, s/n, 08810 Sant Pere de Ribes, Barcelona",
+  "default_date": "2027-02-06"
+ },
+ {
+  "jornada": 18,
+  "home": true,
+  "opponent": "Club Handbol Esplugues",
+  "opponent_id": 225731,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-02-14"
+ },
+ {
+  "jornada": 19,
+  "home": false,
+  "opponent": "Club Handbol Vilanova i la Geltrú",
+  "opponent_id": 201805,
+  "location": "CEM Isaac Gálvez, Ronda Ibèrica, 66, 08800 Vilanova i la Geltrú, Barcelona",
+  "default_date": "2027-02-20"
+ },
+ {
+  "jornada": 20,
+  "home": false,
+  "opponent": "Club Handbol Cambrils",
+  "opponent_id": 201396,
+  "location": "Palau Municipal d'Esports de Cambrils, Plaça de l'Ajuntament, 1, 43850 Cambrils, Tarragona",
+  "default_date": "2027-02-27"
+ },
+ {
+  "jornada": 21,
+  "home": true,
+  "opponent": "LBDP Penya Blaugrana SES",
+  "opponent_id": 212719,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-03-07"
+ },
+ {
+  "jornada": 22,
+  "home": false,
+  "opponent": "Club Handbol Sant Llorenç A",
+  "opponent_id": 201695,
+  "location": "Pavelló Municipal Andrey Xepkin, Carrer de Mataró, s/n (Parc Esportiu Les Grases), 08980 Sant Feliu de Llobregat, Barcelona",
+  "default_date": "2027-03-13"
+ },
+ {
+  "jornada": 23,
+  "home": true,
+  "opponent": "HC Andorra Serradells",
+  "opponent_id": 215529,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-03-21"
+ },
+ {
+  "jornada": 24,
+  "home": false,
+  "opponent": "CH. Sant Esteve Sesrovires-B",
+  "opponent_id": 219029,
+  "location": "Pavelló Poliesportiu Municipal (Sant Esteve Sesrovires), Carrer Marta Mata, s/n, 08635 Sant Esteve Sesrovires, Barcelona",
+  "default_date": "2027-04-03"
+ },
+ {
+  "jornada": 25,
+  "home": true,
+  "opponent": "Club Handbol Sant Andreu B",
+  "opponent_id": 222445,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-04-11"
+ },
+ {
+  "jornada": 26,
+  "home": false,
+  "opponent": "Montaggio",
+  "opponent_id": 207145,
+  "location": "Complex Esportiu Les Comes, Carrer Carles Riba, s/n, 08700 Igualada, Barcelona",
+  "default_date": "2027-04-17"
+ },
+ {
+  "jornada": 27,
+  "home": true,
+  "opponent": "Handbol Berga",
+  "opponent_id": 201934,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-04-25"
+ },
+ {
+  "jornada": 28,
+  "home": false,
+  "opponent": "Club Handbol Sant Andreu de la Barca",
+  "opponent_id": 220274,
+  "location": "Complex Esportiu L'Onze (11 de Setembre), Carrer Bonaventura Pedemonte, s/n, 08740 Sant Andreu de la Barca, Barcelona",
+  "default_date": "2027-05-01"
+ },
+ {
+  "jornada": 29,
+  "home": true,
+  "opponent": "Handbol Cooperativa Sant Boi B",
+  "opponent_id": 201899,
+  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
+  "default_date": "2027-05-09"
+ },
+ {
+  "jornada": 30,
+  "home": false,
+  "opponent": "Handbol Gavà (B)",
+  "opponent_id": 201374,
+  "location": "Pavelló Jacme March, Carrer Sant Pere, 116, 08850 Gavà, Barcelona",
+  "default_date": "2027-05-15"
+ }
+]
