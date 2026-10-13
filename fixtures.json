@@ -32,14 +32,6 @@
   "default_date": "2026-10-18"
  },
  {
-  "jornada": 5,
-  "home": true,
-  "opponent": "Club Handbol Cambrils",
-  "opponent_id": 201396,
-  "location": "Poliesportiu Aula Escola Europea, Av. Mare de Déu de Lorda, 34, 08034 Barcelona, Espanya",
-  "default_date": "2026-10-25"
- },
- {
   "jornada": 6,
   "home": false,
   "opponent": "LBDP Penya Blaugrana SES",
@@ -150,14 +142,6 @@
   "opponent_id": 201805,
   "location": "CEM Isaac Gálvez, Ronda Ibèrica, 66, 08800 Vilanova i la Geltrú, Barcelona",
   "default_date": "2027-02-20"
- },
- {
-  "jornada": 20,
-  "home": false,
-  "opponent": "Club Handbol Cambrils",
-  "opponent_id": 201396,
-  "location": "Palau Municipal d'Esports de Cambrils, Plaça de l'Ajuntament, 1, 43850 Cambrils, Tarragona",
-  "default_date": "2027-02-27"
  },
  {
   "jornada": 21,
