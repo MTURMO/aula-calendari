@@ -26,7 +26,7 @@ END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:aula-handbol-2627-j01@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20260927T104500
 DTEND;TZID=Europe/Madrid:20260927T123000
 SUMMARY:Club Handbol Martorell vs AULA (Jornada 1)
@@ -36,7 +36,7 @@ DESCRIPTION:Partit fora de casa (Jornada 1) - Primera Catalana Sènior Masc
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j02@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20261004T190000
 DTEND;TZID=Europe/Madrid:20261004T204500
 SUMMARY:AULA vs MGC Mútua Handbol Ribes Atlètic (Jornada 2)
@@ -48,7 +48,7 @@ DESCRIPTION:Partit de lliga (Jornada 2) - Primera Catalana Sènior Masculin
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j03@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20261011T120000
 DTEND;TZID=Europe/Madrid:20261011T134500
 SUMMARY:Club Handbol Esplugues vs AULA (Jornada 3)
@@ -59,7 +59,7 @@ DESCRIPTION:Partit fora de casa (Jornada 3) - Primera Catalana Sènior Masc
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j04@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20261017T190000
 DTEND;TZID=Europe/Madrid:20261017T204500
 SUMMARY:AULA vs Club Handbol Vilanova i la Geltrú (Jornada 4)
@@ -70,20 +70,8 @@ DESCRIPTION:Partit de lliga (Jornada 4) - Primera Catalana Sènior Masculin
   19:00-20:45.
 END:VEVENT
 BEGIN:VEVENT
-UID:aula-handbol-2627-j05@aulahandbol
-DTSTAMP:20261007T222217Z
-DTSTART;TZID=Europe/Madrid:20261025T190000
-DTEND;TZID=Europe/Madrid:20261025T204500
-SUMMARY:AULA vs Club Handbol Cambrils (Jornada 5)
-LOCATION:Poliesportiu Aula Escola Europea\, Av. Mare de Déu de Lorda\, 34\
- , 08034 Barcelona\, Espanya
-DESCRIPTION:Partit de lliga (Jornada 5) - Primera Catalana Sènior Masculin
- a Grup B. Data prevista\, pendent de confirmar a la web. Hora habitual d'A
- ULA: 19:00-20:45.
-END:VEVENT
-BEGIN:VEVENT
 UID:aula-handbol-2627-j06@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261102
 SUMMARY:LBDP Penya Blaugrana SES vs AULA (Jornada 6)
@@ -95,7 +83,7 @@ DESCRIPTION:Partit fora de casa (Jornada 6) - Primera Catalana Sènior Masc
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j07@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20261108T190000
 DTEND;TZID=Europe/Madrid:20261108T204500
 SUMMARY:AULA vs Club Handbol Sant Llorenç A (Jornada 7)
@@ -107,7 +95,7 @@ DESCRIPTION:Partit de lliga (Jornada 7) - Primera Catalana Sènior Masculin
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j08@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
 SUMMARY:HC Andorra Serradells vs AULA (Jornada 8)
@@ -119,7 +107,7 @@ DESCRIPTION:Partit fora de casa (Jornada 8) - Primera Catalana Sènior Masc
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j09@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20261122T190000
 DTEND;TZID=Europe/Madrid:20261122T204500
 SUMMARY:AULA vs CH. Sant Esteve Sesrovires-B (Jornada 9)
@@ -131,7 +119,7 @@ DESCRIPTION:Partit de lliga (Jornada 9) - Primera Catalana Sènior Masculin
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j10@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261130
 SUMMARY:Club Handbol Sant Andreu B vs AULA (Jornada 10)
@@ -143,7 +131,7 @@ DESCRIPTION:Partit fora de casa (Jornada 10) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j11@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20261213T190000
 DTEND;TZID=Europe/Madrid:20261213T204500
 SUMMARY:AULA vs Montaggio (Jornada 11)
@@ -155,7 +143,7 @@ DESCRIPTION:Partit de lliga (Jornada 11) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j12@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261221
 SUMMARY:Handbol Berga vs AULA (Jornada 12)
@@ -167,7 +155,7 @@ DESCRIPTION:Partit fora de casa (Jornada 12) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j13@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270110T190000
 DTEND;TZID=Europe/Madrid:20270110T204500
 SUMMARY:AULA vs Club Handbol Sant Andreu de la Barca (Jornada 13)
@@ -179,7 +167,7 @@ DESCRIPTION:Partit de lliga (Jornada 13) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j14@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270116
 DTEND;VALUE=DATE:20270118
 SUMMARY:Handbol Cooperativa Sant Boi B vs AULA (Jornada 14)
@@ -191,7 +179,7 @@ DESCRIPTION:Partit fora de casa (Jornada 14) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j15@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270124T190000
 DTEND;TZID=Europe/Madrid:20270124T204500
 SUMMARY:AULA vs Handbol Gavà (B) (Jornada 15)
@@ -203,7 +191,7 @@ DESCRIPTION:Partit de lliga (Jornada 15) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j16@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270131T190000
 DTEND;TZID=Europe/Madrid:20270131T204500
 SUMMARY:AULA vs Club Handbol Martorell (Jornada 16)
@@ -215,7 +203,7 @@ DESCRIPTION:Partit de lliga (Jornada 16) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j17@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270206
 DTEND;VALUE=DATE:20270208
 SUMMARY:MGC Mútua Handbol Ribes Atlètic vs AULA (Jornada 17)
@@ -227,7 +215,7 @@ DESCRIPTION:Partit fora de casa (Jornada 17) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j18@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270214T190000
 DTEND;TZID=Europe/Madrid:20270214T204500
 SUMMARY:AULA vs Club Handbol Esplugues (Jornada 18)
@@ -239,7 +227,7 @@ DESCRIPTION:Partit de lliga (Jornada 18) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j19@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270222
 SUMMARY:Club Handbol Vilanova i la Geltrú vs AULA (Jornada 19)
@@ -250,20 +238,8 @@ DESCRIPTION:Partit fora de casa (Jornada 19) - Primera Catalana Sènior Mas
  t ocupa tot el cap de setmana (20/02-21/02).
 END:VEVENT
 BEGIN:VEVENT
-UID:aula-handbol-2627-j20@aulahandbol
-DTSTAMP:20261007T222217Z
-DTSTART;VALUE=DATE:20270227
-DTEND;VALUE=DATE:20270301
-SUMMARY:Club Handbol Cambrils vs AULA (Jornada 20)
-LOCATION:Palau Municipal d'Esports de Cambrils\, Plaça de l'Ajuntament\, 1
- \, 43850 Cambrils\, Tarragona
-DESCRIPTION:Partit fora de casa (Jornada 20) - Primera Catalana Sènior Mas
- culina Grup B. Hora encara no confirmada per la federació\; l'esdevenimen
- t ocupa tot el cap de setmana (27/02-28/02).
-END:VEVENT
-BEGIN:VEVENT
 UID:aula-handbol-2627-j21@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270307T190000
 DTEND;TZID=Europe/Madrid:20270307T204500
 SUMMARY:AULA vs LBDP Penya Blaugrana SES (Jornada 21)
@@ -275,7 +251,7 @@ DESCRIPTION:Partit de lliga (Jornada 21) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j22@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270313
 DTEND;VALUE=DATE:20270315
 SUMMARY:Club Handbol Sant Llorenç A vs AULA (Jornada 22)
@@ -287,7 +263,7 @@ DESCRIPTION:Partit fora de casa (Jornada 22) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j23@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270321T190000
 DTEND;TZID=Europe/Madrid:20270321T204500
 SUMMARY:AULA vs HC Andorra Serradells (Jornada 23)
@@ -299,7 +275,7 @@ DESCRIPTION:Partit de lliga (Jornada 23) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j24@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270403
 DTEND;VALUE=DATE:20270405
 SUMMARY:CH. Sant Esteve Sesrovires-B vs AULA (Jornada 24)
@@ -311,7 +287,7 @@ DESCRIPTION:Partit fora de casa (Jornada 24) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j25@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270411T190000
 DTEND;TZID=Europe/Madrid:20270411T204500
 SUMMARY:AULA vs Club Handbol Sant Andreu B (Jornada 25)
@@ -323,7 +299,7 @@ DESCRIPTION:Partit de lliga (Jornada 25) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j26@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270417
 DTEND;VALUE=DATE:20270419
 SUMMARY:Montaggio vs AULA (Jornada 26)
@@ -335,7 +311,7 @@ DESCRIPTION:Partit fora de casa (Jornada 26) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j27@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270425T190000
 DTEND;TZID=Europe/Madrid:20270425T204500
 SUMMARY:AULA vs Handbol Berga (Jornada 27)
@@ -347,7 +323,7 @@ DESCRIPTION:Partit de lliga (Jornada 27) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j28@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270503
 SUMMARY:Club Handbol Sant Andreu de la Barca vs AULA (Jornada 28)
@@ -359,7 +335,7 @@ DESCRIPTION:Partit fora de casa (Jornada 28) - Primera Catalana Sènior Mas
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j29@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;TZID=Europe/Madrid:20270509T190000
 DTEND;TZID=Europe/Madrid:20270509T204500
 SUMMARY:AULA vs Handbol Cooperativa Sant Boi B (Jornada 29)
@@ -371,7 +347,7 @@ DESCRIPTION:Partit de lliga (Jornada 29) - Primera Catalana Sènior Masculi
 END:VEVENT
 BEGIN:VEVENT
 UID:aula-handbol-2627-j30@aulahandbol
-DTSTAMP:20261007T222217Z
+DTSTAMP:20261013T220617Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270517
 SUMMARY:Handbol Gavà (B) vs AULA (Jornada 30)
