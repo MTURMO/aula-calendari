@@ -3,9 +3,10 @@
 Genera docs/aula.ics con los partidos de AE Aula Handbol (Primera Catalana
 Sènior Masculina, Grup B, 26/27).
 
-Base: fixtures.json (30 jornadas, rival, local/visitante, pabellón y fecha
-provisional). Cada ejecución lee las 30 jornadas de la web de resultados y,
-para cada partido de AULA, aplica lo que esté publicado:
+Base: fixtures.json (jornadas, rival, local/visitante, pabellón y fecha
+provisional). Cada ejecución lee el calendario completo del grupo en la API de
+la web de resultados (json/beta.php, la que usa la web nueva) y, para cada
+partido de AULA, aplica lo que esté publicado (campo "confirmada" de la web):
 
   * Partido en casa      -> día de la web, hora fija 19:00
   * Partido fuera        -> día y hora de la web
@@ -15,7 +16,7 @@ para cada partido de AULA, aplica lo que esté publicado:
 Si la web no responde o cambia de formato, el script termina con error SIN
 tocar el calendario publicado (GitHub te avisa por correo del fallo).
 
-Uso:  python update_calendar.py [--html-dir carpeta_con_jornada_N.html]
+Uso:  python update_calendar.py [--json-file torneo.json]
 """
 import argparse
 import json
@@ -29,64 +30,74 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "docs" / "aula.ics"
 
 AULA_ID = 215497
-JORNADA_URL = (
-    "https://resultadosbalonmano.isquad.es/competicion.php?seleccion=0&id=1038560"
-    "&id_ambito=0&id_territorial=17&id_superficie=1&iframe=0&id_categoria=3077"
-    "&id_competicion=211807&lang=ca&jornada={j}"
-)
+API_URL = "https://resultadosbalonmano.isquad.es/maqueta/json/beta.php"
+TORNEO_ID = 1038560                 # Primera Catalana Sènior Masc. - Grup B
 HOME_TIME = (19, 0)                 # AULA juega en casa siempre a las 19:00
 DURATION = timedelta(minutes=105)   # 19:00 -> 20:45
 CAL_NAME = "AE Aula Handbol - Sènior Masculí 26/27"
 COMPETITION = "Primera Catalana Sènior Masculina Grup B"
 TZID = "Europe/Madrid"
 
-DATE_RE = re.compile(r"(\d{2})/(\d{2})/(\d{4})(?:\s+(\d{1,2}):(\d{2}))?")
-ID_RE = re.compile(r"id_equipo=(\d+)")
+DATE_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{1,2}):(\d{2}))?")
 
 
 # --------------------------------------------------------------------------
 # Lectura de la web
 # --------------------------------------------------------------------------
-def fetch_html(j, html_dir=None):
-    if html_dir:
-        return (Path(html_dir) / f"jornada_{j}.html").read_bytes()
+def fetch_torneo(json_file=None):
+    """Descarga el calendario completo del grupo (todas las jornadas) en una petición."""
+    if json_file:
+        return json.loads(Path(json_file).read_text(encoding="utf-8"))
     import requests
 
-    headers = {"User-Agent": "Mozilla/5.0 (calendario-aula; uso personal)"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/130.0 Safari/537.36",
+        "Referer": "https://resultadosbalonmano.isquad.es/maqueta/",
+        "X-Requested-With": "XMLHttpRequest",
+        "Accept": "application/json, text/plain, */*",
+    }
     last = None
     for attempt in range(3):
         try:
-            r = requests.get(JORNADA_URL.format(j=j), headers=headers, timeout=30)
+            r = requests.post(API_URL, data={"tipo": "torneo", "id": TORNEO_ID},
+                              headers=headers, timeout=60)
             r.raise_for_status()
-            return r.content
+            data = r.json()
+            if not isinstance(data, dict) or "partidos" not in data:
+                raise ValueError(f"respuesta sin 'partidos': {r.text[:300]!r}")
+            return data
         except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(3 * (attempt + 1))
-    raise RuntimeError(f"No se pudo descargar la jornada {j}: {last}")
+    raise RuntimeError(f"No se pudo leer el calendario de la web: {last}")
 
 
-def parse_jornada(html, opponent_id):
-    """Devuelve None si no hay fila AULA-rival; si la hay, {'date','time'}."""
-    from bs4 import BeautifulSoup
+def parse_web(data):
+    """{jornada: {'date','time'}} solo con los partidos de AULA.
 
-    soup = BeautifulSoup(html, "html.parser")
-    for tr in soup.find_all("tr"):
-        if tr.find("tr"):          # ignora filas que contienen otras tablas
+    Si la web marca el partido como no confirmado ("confirmada": 0) su fecha es
+    provisional y se ignora (se queda el evento provisional), salvo que ya se
+    haya jugado. La hora 00:00 equivale a hora sin fijar.
+    """
+    out = {}
+    for p in data["partidos"]:
+        if AULA_ID not in (p["l"]["id"], p["v"]["id"]):
             continue
-        ids = {int(x) for a in tr.find_all("a", href=True) for x in ID_RE.findall(a["href"])}
-        if AULA_ID in ids and opponent_id in ids:
-            text = " ".join(tr.get_text(" ").split())
-            m = DATE_RE.search(text)
-            if not m:
-                return {"date": None, "time": None}
-            d = date(int(m[3]), int(m[2]), int(m[1]))
-            t = None
-            if m[4] is not None:
-                t = (int(m[4]), int(m[5]))
-                if t == (0, 0):     # 00:00 = "hora sin fijar"
-                    t = None
-            return {"date": d, "time": t}
-    return None
+        j = int(p["j"])
+        m = DATE_RE.search(p.get("fecha") or "")
+        jugado = p.get("estado") == "Finalizado" or p.get("gl") is not None
+        if not m or (p.get("confirmada") == 0 and not jugado):
+            out[j] = {"opp": {p["l"]["id"], p["v"]["id"]} - {AULA_ID}, "date": None, "time": None}
+            continue
+        d = date(int(m[1]), int(m[2]), int(m[3]))
+        t = None
+        if m[4] is not None:
+            t = (int(m[4]), int(m[5]))
+            if t == (0, 0):
+                t = None
+        out[j] = {"opp": {p["l"]["id"], p["v"]["id"]} - {AULA_ID}, "date": d, "time": t}
+    return out
 
 
 # --------------------------------------------------------------------------
@@ -199,27 +210,30 @@ def starts(ics):
 # --------------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--html-dir", help="usar jornada_N.html locales (para pruebas)")
+    ap.add_argument("--json-file", help="usar un JSON local del torneo (para pruebas)")
     args = ap.parse_args()
 
     fixtures = json.loads((ROOT / "fixtures.json").read_text(encoding="utf-8"))
     events, matched, warnings = [], 0, []
 
+    try:
+        web_all = parse_web(fetch_torneo(args.json_file))
+    except Exception as e:  # noqa: BLE001
+        print(f"ERROR: {e}\nNo se modifica el calendario.", file=sys.stderr)
+        return 1
+
     for fx in fixtures:
         j = fx["jornada"]
-        try:
-            html = fetch_html(j, args.html_dir)
-        except Exception as e:  # noqa: BLE001
-            print(f"ERROR: {e}\nNo se modifica el calendario.", file=sys.stderr)
-            return 1
-        web = parse_jornada(html, fx["opponent_id"])
-        if web is None:
+        web = web_all.get(j)
+        if web is not None and fx["opponent_id"] not in web["opp"]:
+            warnings.append(f"J{j}: la web tiene otro rival ({sorted(web['opp'])}) y no "
+                            f"{fx['opponent']}; revisa fixtures.json (uso datos base)")
+            web = None
+        elif web is None:
             warnings.append(f"J{j}: no encuentro AULA vs {fx['opponent']} en la web (uso datos base)")
         else:
             matched += 1
         events.append(build_event(fx, web))
-        if not args.html_dir:
-            time.sleep(1)  # cortesía con el servidor
 
     for w in warnings:
         print("AVISO:", w)
