@@ -30,7 +30,11 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "docs" / "aula.ics"
 
 AULA_ID = 215497
-API_URL = "https://resultadosbalonmano.isquad.es/maqueta/json/beta.php"
+PAGE_URL = "https://resultadosbalonmano.isquad.es/maqueta/"
+API_URL = PAGE_URL + "json/beta.php"
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
+TOKEN_RE = re.compile(r'<meta name="client-token" content="([^"]+)"')
 TORNEO_ID = 1038560                 # Primera Catalana Sènior Masc. - Grup B
 HOME_TIME = (19, 0)                 # AULA juega en casa siempre a las 19:00
 DURATION = timedelta(minutes=105)   # 19:00 -> 20:45
@@ -50,18 +54,23 @@ def fetch_torneo(json_file=None):
         return json.loads(Path(json_file).read_text(encoding="utf-8"))
     import requests
 
-    headers = {
-        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                      "Chrome/130.0 Safari/537.36",
-        "Referer": "https://resultadosbalonmano.isquad.es/maqueta/",
-        "X-Requested-With": "XMLHttpRequest",
-        "Accept": "application/json, text/plain, */*",
-    }
+    # La API exige la cabecera X-Client-Token, que la web pone en
+    # <meta name="client-token"> de la página /maqueta/ y que caduca: hay que
+    # cargar la página en cada intento para tener uno vigente.
     last = None
     for attempt in range(3):
+        if attempt:
+            time.sleep(3 * attempt)
         try:
-            r = requests.post(API_URL, data={"tipo": "torneo", "id": TORNEO_ID},
-                              headers=headers, timeout=60)
+            s = requests.Session()
+            s.headers["User-Agent"] = UA
+            page = s.get(PAGE_URL, timeout=30)
+            page.raise_for_status()
+            m = TOKEN_RE.search(page.text)
+            if not m:
+                raise ValueError("no encuentro el client-token en la página /maqueta/")
+            r = s.post(API_URL, data={"tipo": "torneo", "id": TORNEO_ID}, timeout=60,
+                       headers={"X-Client-Token": m[1], "Referer": PAGE_URL})
             r.raise_for_status()
             data = r.json()
             if not isinstance(data, dict) or "partidos" not in data:
@@ -69,7 +78,6 @@ def fetch_torneo(json_file=None):
             return data
         except Exception as e:  # noqa: BLE001
             last = e
-            time.sleep(3 * (attempt + 1))
     raise RuntimeError(f"No se pudo leer el calendario de la web: {last}")
 
 
